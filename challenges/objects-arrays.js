@@ -73,11 +73,17 @@ const graduates = [
 /* Request 1: Create a new array called universities that contains all the universities in the graduates array. This will be an array of strings.
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
-const universities = [];
-graduates.forEach(graduate => {
-  universities.push(graduate.university);
-});
-console.log(universities);
+// const universities = [];
+// graduates.forEach(graduate => {
+//   universities.push(graduate.university);
+// });
+// console.log(universities);
+
+//map
+const universities = graduates.map(graduate => {
+  return graduate.university;
+})
+
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. This will be an array of strings.
 
@@ -135,7 +141,7 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 
 */
 
-const lowCaseAnimalNames = [];
+const lowCaseAnimalNames = zooAnimals.map(animal => animal.animal_name.toLowerCase());
 console.log(lowCaseAnimalNames);
 
 /* Request 3: .filter() 
